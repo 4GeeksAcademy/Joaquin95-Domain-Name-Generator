@@ -5,11 +5,16 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = function(domain) {
+window.onload = function() {
   let pronoun = ["the", "our", "power", "my", "what"];
   let adj = ["morales", "awesome", "greatness", "delicious", "funny"];
   let noun = ["Pizza", "dog", "lift", "gym", "car"];
-  let domainextensions = [".com", ".org", ".net", ".mx"];
+  let extensions = [".com", ".org", ".net", ".mx", ".us"];
 
-  console.log(pronoun[0] + adj[0] + noun[0] + domainextensions[0]);
+  for (let i = 0; i < pronoun.length; i++) {
+    for (let a = 0; a < adj.length; a++)
+      for (let n = 0; n < noun.length; n++)
+        for (let e = 0; e < extensions.length; e++)
+          console.log(pronoun[i] + adj[a] + noun[n] + extensions[e]);
+  }
 };
